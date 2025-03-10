@@ -7,11 +7,10 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class AutomaticPayment extends Payment{
 
     private String scheduledDate;
     private String businessDocumentNumber;
-    private TypePayment typePayment = AUTOMATIC;
+    private TypePayment typePayment = TypePayment.AUTOMATIC;
 
 }

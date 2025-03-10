@@ -7,10 +7,9 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class SimplePayment extends Payment{
 
     private String personDocumentNumber;
-    private TypePayment typePayment = SIMPLE;
+    private TypePayment typePayment = TypePayment.SIMPLE;
 
 }

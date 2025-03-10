@@ -1,6 +1,5 @@
 package com.anacorp.paymentmanagement.service;
 
-import com.anacorp.paymentmanagement.enums.TypePayment;
 import com.anacorp.paymentmanagement.model.Filtro;
 import com.anacorp.paymentmanagement.model.Payment;
 

@@ -20,7 +20,7 @@ public class PaymentController {
 
     @GetMapping("/payment/{id}")
     public Payment getPaymentById(@RequestParam String id){
-        
+
         return null;
     }
 
