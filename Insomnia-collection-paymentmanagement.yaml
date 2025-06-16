@@ -1,0 +1,203 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1749856455034
+  modified: 1749856455034
+  description: ""
+collection:
+  - url: http://localhost:8080/payments
+    name: Listar Todos Pagamentos
+    meta:
+      id: req_563bf543b1814b8f9c9bf275e7b3f07f
+      created: 1749856535066
+      modified: 1750010065419
+      isPrivate: false
+      description: ""
+      sortKey: -1749856535066
+    method: GET
+    parameters:
+      - id: pair_ded944e3d1944582a02b77b4972d7204
+        name: start
+        value: 01-06-2025
+        description: ""
+        disabled: true
+      - id: pair_4c92b94b0cb94a64bd57bb4b86c38bf7
+        name: end
+        value: 03-06-2025
+        description: ""
+        disabled: true
+      - id: pair_e5da511fc883436b89b76b8f9fc42db7
+        name: type
+        value: AUTOMATIC
+        description: ""
+        disabled: true
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/payments
+    name: Criar Pagamento Automatico
+    meta:
+      id: req_d9788c273c424aad866f9ad6bd314dba
+      created: 1749942560709
+      modified: 1750035327929
+      isPrivate: false
+      description: ""
+      sortKey: -1749942560709
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"amount":10.20,
+        	"creationDate": {% now 'unix', 'dd-mm-yyyy' %},
+        	"description":"Pagamento Teste",
+        	"status":"CREATED",
+        	"scheduledDate":{% faker 'timestamp' %},
+        	"businessDocumentNumber":"12345678901234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/payments/{% response 'body',
+      'req_d9788c273c424aad866f9ad6bd314dba', 'b64::JC5pZA==::46b', 'always', 60
+      %}
+    name: Consultar Pagamento
+    meta:
+      id: req_94d31727a44743efb2c01631003ca7af
+      created: 1749943794477
+      modified: 1750032046271
+      isPrivate: false
+      description: ""
+      sortKey: -1749878041476.75
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/payments
+    name: Criar Pagamento Simples
+    meta:
+      id: req_d96203d835d84486827118153615d0cb
+      created: 1749943952203
+      modified: 1750032107004
+      isPrivate: false
+      description: ""
+      sortKey: -1749942560809
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"amount":10.20,
+        	"creationDate": {% now 'unix', 'dd-mm-yyyy' %},
+        	"description":"Pagamento Teste",
+        	"status":"CREATED",
+        	"personDocumentNumber":"12345678901"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/payments/{% response 'body',
+      'req_d96203d835d84486827118153615d0cb', 'b64::JC5pZA==::46b', 'never', 60
+      %}
+    name: Deletar Pagamento
+    meta:
+      id: req_bae2bf8c761a44c294d515b630d6b312
+      created: 1750001976319
+      modified: 1750010173724
+      isPrivate: false
+      description: ""
+      sortKey: -1749856534966
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/payments/{% response 'body',
+      'req_d9788c273c424aad866f9ad6bd314dba', 'b64::JC5pZA==::46b', 'always', 60
+      %}
+    name: Alterar Pagamento
+    meta:
+      id: req_ace956f1528f44b5b80179f874d1b7d0
+      created: 1750002166558
+      modified: 1750031797305
+      isPrivate: false
+      description: ""
+      sortKey: -1749856534916
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"amount":100000.20,
+          "description":"Pagamento Alterado"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1749856503687
+    modified: 1749856503687
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1749856503686
+    modified: 1749856503686
+    isPrivate: false

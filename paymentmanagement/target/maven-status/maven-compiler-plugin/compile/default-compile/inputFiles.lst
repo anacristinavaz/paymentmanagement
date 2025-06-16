@@ -1,0 +1,12 @@
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/PaymentmanagementApplication.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/controller/PaymentController.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/dto/PaymentRequest.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/dto/PaymentResponse.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/model/AutomaticPayment.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/model/Payment.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/model/SimplePayment.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/repository/AutomaticPaymentRepository.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/repository/SimplePaymentRepository.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/service/PaymentService.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/util/PaymentMapper.java
+/Users/anacristinavaz/Documents/Projetos/OpenFinance/paymentmanagement/src/main/java/com/bank/paymentmanagement/validator/PaymentRequestValidator.java
